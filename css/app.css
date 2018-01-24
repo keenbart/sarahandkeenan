@@ -31,18 +31,30 @@ p {
     font-style: normal;
 }
 
-.title-container {
+.title-outer-container {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+}
+
+.under-construction .title-outer-container {
+    background-image: url('/images/bee-1-min.png');
+}
+
+.title-inner-container {
     position: relative;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-top: 30px;
-    margin-bottom: 20px;
 }
 
-.title-container::before {
+.title-inner-container::before {
     content: " ";
     position: absolute;
     top: 0;
@@ -52,7 +64,7 @@ p {
     border-top: 2px solid var(--midnight);
 }
 
-.title-container::after {
+.title-inner-container::after {
     content: " ";
     position: absolute;
     bottom: 0;
@@ -85,6 +97,10 @@ p {
     background-color: var(--paper);
 }
 
+.home-page .title-outer-container {
+    background-image: url('/images/flower-1-min.png');
+}
+
 .main-menu {
     display: flex;
     flex-flow: row wrap;
@@ -92,10 +108,7 @@ p {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding: 10px;
 }
 
 .main-menu a {
