@@ -3,30 +3,40 @@
   --paper: #EAE3DB;
   --paper-light: #F7F1E6;
   --midnight: #232834;
+  --forest: #304442;
 }
 
 /* Default styles */
+@font-face {
+    font-family: 'Courier Prime';
+    src: url('CourierPrime.eot');
+    src: url('CourierPrime.eot?#iefix') format('embedded-opentype'),
+        url('CourierPrime.woff') format('woff'),
+        url('CourierPrime.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     background-color: var(--paper);
 }
 
 h1, h2, h3 {
-    color: red;
-    font-family: 'Lora', serif;
+    font-family: 'Lora', Georgia, serif;
     font-style: italic;
     font-weight: bold;
     color: var(--midnight);
 }
 
 p {
-    font-family: 'Lora', serif;
+    font-family: 'Lora', Georgia, serif;
     font-weight: normal;
     font-style: normal;
     color: var(--midnight);
 }
 
 .mono {
-    font-family: 'Cutive Mono', monospace;
+    font-family: 'Courier Prime', Courier, monospace;
     font-weight: normal;
     font-style: normal;
 }
@@ -83,18 +93,51 @@ p {
 
 .subtitle {
     font-family: 'Libre Franklin', sans-serif;
-    font-weight: 500;
+    font-weight: normal;
     font-style: normal;
-    font-size: 16px;
+    font-size: 18px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Courier Prime', Courier, monospace;
+    font-style: initial;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 3px;
+    font-size: 14px;
+    margin-bottom: 4px;
+    margin-top: 50px;
+}
+
+.bottom-logo {
+    display: block;
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
 }
 
 /* Home page */
 .home-page {
     background-color: var(--paper);
+    /* background-color: var(--forest); */
+    /* padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px; */
+}
+
+.home-page .page-container {
+    /* background-color: var(--paper); */
+    padding-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .home-page .title-outer-container {
@@ -111,76 +154,81 @@ p {
     padding: 10px;
 }
 
-.main-menu a {
+.main-menu .menu-item {
     font-family: 'Lora', serif;
     font-style: italic;
     font-weight: bold;
     text-decoration: none;
     color: var(--midnight);
-    border: 2px solid var(--midnight);
     position: relative;
     height: 200px;
     width: 200px;
-    margin: 10px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 15px;
     text-align: center;
     padding-top: 152px;
     box-sizing: border-box;
     font-size: 20px;
-    background-repeat: no-repeat;
+    background-color: var(--paper-light);
+    transition: background-color 0.5s ease;
+    padding-left: 10px;
 }
 
 @media (max-width: 600px) {
-    .main-menu a {
+    .main-menu .menu-item {
         width: 100%;
     }
 }
 
-.main-menu a::before {
+.main-menu .menu-item::after {
     content: " ";
-    background-color: var(--paper-light);
+    background-color: transparent;
+    background-repeat: no-repeat;
     position: absolute;
-    top: 4px;
-    right: 4px;
-    left: -6px;
-    bottom: -6px;
-    z-index: -1;
+    top: -6px;
+    right: -6px;
+    left: 4px;
+    bottom: 4px;
+    border: 2px solid var(--midnight);
 }
 
-.main-menu a:hover::before {
+.main-menu .menu-item:hover {
     background-color: white;
 }
 
-.main-menu .details {
+.main-menu .details::after {
     background-size: auto 120px;
     background-position: center 20px;
     background-image: url('/images/branch-1-min.png');
 }
 
-.main-menu .about-us {
+.main-menu .about-us::after {
     background-size: auto 110px;
     background-position: center 30px;
     background-image: url('/images/bird-1-min.png');
 }
 
-.main-menu .registry {
+.main-menu .registry::after {
     background-size: auto 120px;
     background-position: center 22px;
     background-image: url('/images/pinecone-1-min.png');
 }
 
-.main-menu .engagement {
+.main-menu .engagement::after {
     background-size: auto 90px;
     background-position: center 35px;
     background-image: url('/images/dog-1-min.png');
 }
 
-.main-menu .rsvp {
+.main-menu .rsvp::after {
     background-size: auto 85px;
     background-position: center 45px;
     background-image: url('/images/butterfly-1-min.png');
 }
 
-.main-menu .party {
+.main-menu .party::after {
     background-size: auto 120px;
     background-position: center 20px;
     background-image: url('/images/tree-1-min.png');
