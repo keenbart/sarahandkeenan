@@ -631,15 +631,6 @@ p {
 .rsvp-page {
     background-color: var(--dusty-blue);
 }
-/* .rsvp-page .title-inner-container::before {
-    border-top: 2px solid white;
-}
-.rsvp-page .title-inner-container::after {
-    border-bottom: 2px solid white;
-}
-.rsvp-page h1 {
-    color: white;
-} */
 .rsvp-page .text-section, .registry-page .text-section, .chicago-page .text-section, .under-construction .text-section {
     text-align: center;
 }
