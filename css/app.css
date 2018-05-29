@@ -4,8 +4,13 @@
   --paper-light: #F7F1E6;
   --midnight: #232834;
   --midnight-light: #373A44;
+  --midnight-lighter: #545967;
   --forest: #304442;
   --cranberry-light: #9D0F13; 
+  --wedding-blue: #4786A9;
+  --dusty-blue: #becad2;
+  --sage: #c2d2ce;
+  --blush: #f1e6e7;
   --header-height: 50px;
 }
 
@@ -39,6 +44,25 @@ p {
     color: var(--midnight);
     font-size: 16px;
     line-height: 1.4em;
+}
+
+.button {
+    font-family: Courier, 'Courier Prime', monospace;
+    font-weight: normal;
+    font-style: normal;
+    background-color: var(--midnight-light);
+    color: white;
+    border: none;
+    padding: 16px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: background-color 0.5s ease;
+}
+
+.button:hover {
+    background-color: var(--midnight-lighter);
 }
 
 .navbar {
@@ -125,10 +149,6 @@ p {
     background-size: contain;
 }
 
-.under-construction .title-outer-container {
-    background-image: url('/images/bee-1-min.png');
-}
-
 .title-inner-container {
     position: relative;
     margin-left: auto;
@@ -190,12 +210,13 @@ p {
 
 .bottom-logo {
     display: block;
-    height: 100px;
-    width: 100px;
+    height: 84px;
+    width: 84px;
     margin-left: auto;
     margin-right: auto;
     padding: 40px;
 }
+
 
 /* Home page */
 .home-page {
@@ -236,7 +257,7 @@ p {
 }
 
 .home-page .section-title {
-    font-size: 14px;
+    /* font-size: 14px; */
     margin-top: 40px;
 }
 
@@ -362,13 +383,20 @@ p {
     background-image: url('/images/tree-1-min.png');
 }
 
+.main-menu .chicago::after {
+    background-size: auto 120px;
+    background-position: center 20px;
+    background-image: url('/images/tree-1-min.png');
+}
+
+
 /* About Us Page */
 .about-us-page {
     background-color: var(--paper);
 }
 
 .about-us-page .title-outer-container {
-    background-image: url('/images/bird-1-a30.png');
+    background-image: url('/images/bird-1-small-a30.png');
 }
 
 .preface {
@@ -477,27 +505,52 @@ p {
     margin-bottom: 20px;
 }
 
+
 /* Wedding Details Page */
 .details-page .title-outer-container {
-    background-image: url('/images/flower-1-min.png');
+    /* background-image: url('/images/flower-1-min.png'); */
+    background-image: url('/images/branch-1-a40.png');
     padding-top: 50px;
 }
 
 .details-page {
-    background-color: #AFC7C1;
-    background-color: #c2d2ce;
+    /* background-color: #AFC7C1; */
+    background-color: var(--sage);
+}
+
+.details-page .page-container {
+  text-align: center;
+}
+
+.details-page .text-section {
+  text-align: center;
 }
 
 .details-page .text-section p {
-    font-weight: bold;
-    font-style: italic;
     text-align: center;
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 20px;
+}
+
+.details-page .text-section.subheader-section p {
+    font-weight: bold;
+    font-style: italic;
     font-size: 18px;
     padding-top: 20px;
     letter-spacing: 1px;
+}
+
+.details-page .text-section.subscribe-section p {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    font-family: Courier, 'Courier Prime', monospace;
+}
+
+.details-section-container {
+  display: inline-block;
 }
 
 .details-section {
@@ -511,12 +564,24 @@ p {
     padding-left: 10px;
     padding-bottom: 10px;
     letter-spacing: 1px;
+    max-width: 600px;
+}
+
+.details-section table {
+    padding: 6px;
+    padding-right: 12px;
 }
 
 .details-section td {
     color: var(--midnight);
     font-family: Courier;
-    font-size: 18px;
+    font-size: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.details-section td.border-bottom {
+    border-bottom: 1px dashed var(--midnight);
 }
 
 .details-section .details-label {
@@ -539,6 +604,63 @@ p {
     bottom: 4px;
     border: 2px solid var(--midnight);
 }
+
+
+/* Registry Page */
+.registry-page .title-outer-container {
+    background-image: url('/images/pinecone-2-a40.png');
+}
+.registry-page {
+  background-color: var(--paper);
+}
+
+
+/* Visiting Chicago Page */
+.chicago-page .title-outer-container {
+    background-image: url('/images/tree-a40.png');
+}
+.chicago-page {
+  background-color: var(--paper);
+}
+
+
+/* RSVP Page */
+.rsvp-page .title-outer-container {
+    background-image: url('/images/butterfly-1-a40.png');
+}
+.rsvp-page {
+    background-color: var(--dusty-blue);
+}
+/* .rsvp-page .title-inner-container::before {
+    border-top: 2px solid white;
+}
+.rsvp-page .title-inner-container::after {
+    border-bottom: 2px solid white;
+}
+.rsvp-page h1 {
+    color: white;
+} */
+.rsvp-page .text-section, .registry-page .text-section, .chicago-page .text-section, .under-construction .text-section {
+    text-align: center;
+}
+.rsvp-page .text-section p, .registry-page .text-section p, .chicago-page .text-section p, .under-construction .text-section p {
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    font-family: Courier, 'Courier Prime', monospace;
+}
+
+
+/* Under Construction Page */
+.under-construction .title-outer-container {
+    background-image: url('/images/bee-1-min.png');
+}
+
 
 /* Utility */
 .fadein {
