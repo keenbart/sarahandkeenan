@@ -505,6 +505,29 @@ p {
     margin-bottom: 20px;
 }
 
+@media (max-width: 600px) {
+    .photo-row {
+      padding: 0;
+      flex-direction: column;
+      background-image: none !important;
+    } 
+    .photo-row.reverse {
+      flex-direction: column-reverse;
+    } 
+    .photo {
+      padding: 0;
+      width: 100%;
+      flex-basis: auto;
+    }
+    .photo-text-area {
+      width: 100%;
+      padding: 20px;
+    }
+    .photo-map, .photo-bird {
+      display: none;
+    }
+}
+
 
 /* Wedding Details Page */
 .details-page .title-outer-container {
