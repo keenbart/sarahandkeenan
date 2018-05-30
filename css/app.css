@@ -546,6 +546,8 @@ p {
 }
 
 .details-page .text-section {
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
 }
 
@@ -656,6 +658,8 @@ p {
 }
 .rsvp-page .text-section, .registry-page .text-section, .chicago-page .text-section, .under-construction .text-section {
     text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .rsvp-page .text-section p, .registry-page .text-section p, .chicago-page .text-section p, .under-construction .text-section p {
     text-align: center;
