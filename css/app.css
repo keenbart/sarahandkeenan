@@ -1,26 +1,26 @@
 /* CSS custom properties */
+
 :root {
-  --paper: #EAE3DB;
-  --paper-light: #F7F1E6;
-  --midnight: #232834;
-  --midnight-light: #373A44;
-  --midnight-lighter: #545967;
-  --forest: #304442;
-  --cranberry-light: #9D0F13; 
-  --wedding-blue: #4786A9;
-  --dusty-blue: #becad2;
-  --sage: #c2d2ce;
-  --blush: #f1e6e7;
-  --header-height: 50px;
+    --paper: #EAE3DB;
+    --paper-light: #F7F1E6;
+    --midnight: #232834;
+    --midnight-light: #373A44;
+    --midnight-lighter: #545967;
+    --forest: #304442;
+    --cranberry: #9D0F13;
+    --wedding-blue: #4786A9;
+    --dusty-blue: #becad2;
+    --sage: #c2d2ce;
+    --blush: #f1e6e7;
+    --header-height: 50px;
 }
 
 /* Default styles */
+
 @font-face {
     font-family: 'Courier Prime';
     src: url('CourierPrime.eot');
-    src: url('CourierPrime.eot?#iefix') format('embedded-opentype'),
-        url('CourierPrime.woff') format('woff'),
-        url('CourierPrime.ttf') format('truetype');
+    src: url('CourierPrime.eot?#iefix') format('embedded-opentype'), url('CourierPrime.woff') format('woff'), url('CourierPrime.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -38,7 +38,7 @@ h1, h2, h3 {
 }
 
 p {
-    font-family: 'Lora', Georgia, serif;
+    font-family: 'Libre Franklin', sans-serif;
     font-weight: normal;
     font-style: normal;
     color: var(--midnight);
@@ -217,14 +217,11 @@ p {
     padding: 40px;
 }
 
-
 /* Home page */
+
 .home-page {
     background-color: var(--paper);
     padding-top: 0;
-}
-
-.home-page .page-container {
 }
 
 .home-page .title-outer-container {
@@ -257,7 +254,6 @@ p {
 }
 
 .home-page .section-title {
-    /* font-size: 14px; */
     margin-top: 40px;
 }
 
@@ -310,11 +306,11 @@ p {
     }
     .navbar .home-logo {
         display: none;
-    }  
+    }
     .navbar .navbar-links a:not(:last-child)::after {
         content: "●";
-        font-size:10px;
-        opacity:0.3
+        font-size: 10px;
+        opacity: 0.3
     }
     .navbar .navbar-links {
         margin-left: auto;
@@ -350,47 +346,47 @@ p {
 .main-menu .details::after {
     background-size: auto 120px;
     background-position: center 20px;
-    background-image: url('/images/branch-1-min.png');
+    background-image: url('/images/branch-1.png');
 }
 
 .main-menu .about-us::after {
     background-size: auto 110px;
     background-position: center 30px;
-    background-image: url('/images/bird-1-min.png');
+    background-image: url('/images/bird-1.png');
 }
 
 .main-menu .registry::after {
     background-size: auto 120px;
     background-position: center 22px;
-    background-image: url('/images/pinecone-1-min.png');
+    background-image: url('/images/pinecone-1.png');
 }
 
 .main-menu .engagement::after {
     background-size: auto 90px;
     background-position: center 35px;
-    background-image: url('/images/dog-1-min.png');
+    background-image: url('/images/dog-1.png');
 }
 
 .main-menu .rsvp::after {
     background-size: auto 85px;
     background-position: center 45px;
-    background-image: url('/images/butterfly-1-min.png');
+    background-image: url('/images/butterfly-1.png');
 }
 
 .main-menu .party::after {
     background-size: auto 120px;
     background-position: center 20px;
-    background-image: url('/images/tree-1-min.png');
+    background-image: url('/images/tree-1.png');
 }
 
 .main-menu .chicago::after {
     background-size: auto 120px;
     background-position: center 20px;
-    background-image: url('/images/tree-1-min.png');
+    background-image: url('/images/tree-1.png');
 }
 
-
 /* About Us Page */
+
 .about-us-page {
     background-color: var(--paper);
 }
@@ -426,10 +422,9 @@ p {
     display: flex;
     flex-wrap: nowrap;
     align-items: start;
-    padding-top:40px;
+    padding-top: 40px;
     padding-bottom: 40px;
 }
-
 
 .photo-row.feature {
     background-size: cover;
@@ -465,7 +460,7 @@ p {
     flex-basis: 40%;
     padding-top: 20px;
     padding-bottom: 20px;
-} 
+}
 
 .feature .photo-text-area {
     padding-left: 20px;
@@ -488,7 +483,7 @@ p {
     font-family: 'Libre Franklin', sans-serif;
     font-weight: bold;
     font-style: normal;
-    font-size: 18px;
+    font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-top: 0;
@@ -500,38 +495,37 @@ p {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    color: var(--cranberry-light);
+    color: var(--cranberry);
     margin-top: 8px;
     margin-bottom: 20px;
 }
 
 @media (max-width: 600px) {
     .photo-row {
-      padding: 0;
-      flex-direction: column;
-      background-image: none !important;
-    } 
+        padding: 0;
+        flex-direction: column;
+        background-image: none !important;
+    }
     .photo-row.reverse {
-      flex-direction: column-reverse;
-    } 
+        flex-direction: column-reverse;
+    }
     .photo {
-      padding: 0;
-      width: 100%;
-      flex-basis: auto;
+        padding: 0;
+        width: 100%;
+        flex-basis: auto;
     }
     .photo-text-area {
-      width: 100%;
-      padding: 20px;
+        width: 100%;
+        padding: 20px;
     }
     .photo-map, .photo-bird {
-      display: none;
+        display: none;
     }
 }
 
-
 /* Wedding Details Page */
+
 .details-page .title-outer-container {
-    /* background-image: url('/images/flower-1-min.png'); */
     background-image: url('/images/branch-1-a40.png');
     padding-top: 50px;
 }
@@ -542,13 +536,17 @@ p {
 }
 
 .details-page .page-container {
-  text-align: center;
+    text-align: center;
+}
+
+.details-page .subheader-section p {
+    font-family: 'Lora', Georgia, serif;
 }
 
 .details-page .text-section {
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
 }
 
 .details-page .text-section p {
@@ -575,7 +573,8 @@ p {
 }
 
 .details-section-container {
-  display: inline-block;
+    display: inline-block;
+    margin-top: 40px;
 }
 
 .details-section {
@@ -615,8 +614,7 @@ p {
     width: 100px;
 }
 
-.details-section .details-content {
-}
+.details-section .details-content {}
 
 .details-section::after {
     content: " ";
@@ -630,37 +628,155 @@ p {
     border: 2px solid var(--midnight);
 }
 
-
 /* Registry Page */
+
 .registry-page .title-outer-container {
     background-image: url('/images/pinecone-2-a40.png');
 }
+
 .registry-page {
-  background-color: var(--paper);
+    background-color: var(--sage);
 }
 
+.registry-page .text-section {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.registry-page .registry-img {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid transparent;
+    -webkit-transition: border 0.4s ease-out;
+    -moz-transition: border 0.4s ease-out;
+    transition: border 0.4s ease-out;
+    margin-top: 8px;
+    box-sizing: border-box;
+}
+
+.registry-page .registry-img:hover {
+    border: 1px dashed var(--midnight);
+}
 
 /* Visiting Chicago Page */
+
 .chicago-page .title-outer-container {
     background-image: url('/images/tree-a40.png');
 }
+
 .chicago-page {
-  background-color: var(--paper);
+    background-color: var(--paper);
 }
 
+.chicago-page .content-area {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.chicago-page .category-title {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    margin-top: 60px;
+}
+
+.chicago-page .content-area p, .chicago-page .content-area ul {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.chicago-page .content-area p {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.chicago-page .content-area ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.chicago-page .content-area li {
+    font-family: Courier, 'Courier Prime', monospace;
+    padding-left: 0;
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 24px;
+}
+
+.chicago-page .hotel-title, .styled-link {
+    font-weight: bold;
+    color: var(--cranberry);
+    margin-bottom: 4px;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border 0.4s ease-out;
+    -moz-transition: border 0.4s ease-out;
+    transition: border 0.4s ease-out;
+}
+
+.chicago-page .hotel-title:hover, .styled-link:hover {
+    border-bottom: 2px solid var(--cranberry);
+}
+
+.chicago-page .hotel-section ul {
+    margin-top: 30px;
+}
+
+.chicago-page .hotel {
+    display: flex;
+}
+
+.chicago-page .hotel-img {
+    width: 240px;
+    align-self: center;
+}
+
+.chicago-page .hotel-text {
+    padding-left: 18px;
+    font-family: Courier, 'Courier Prime', monospace;
+}
+
+@media (max-width: 600px) {
+    .chicago-page .hotel {
+        display: block;
+    }
+    .chicago-page .hotel-text {
+        padding-left: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .chicago-page .hotel-img {
+        width: 100%;
+    }
+}
 
 /* RSVP Page */
+
 .rsvp-page .title-outer-container {
     background-image: url('/images/butterfly-1-a40.png');
 }
+
 .rsvp-page {
     background-color: var(--dusty-blue);
 }
+
 .rsvp-page .text-section, .registry-page .text-section, .chicago-page .text-section, .under-construction .text-section {
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
 }
+
 .rsvp-page .text-section p, .registry-page .text-section p, .chicago-page .text-section p, .under-construction .text-section p {
     text-align: center;
     max-width: 500px;
@@ -673,19 +789,23 @@ p {
     font-family: Courier, 'Courier Prime', monospace;
 }
 
-
 /* Under Construction Page */
+
 .under-construction .title-outer-container {
-    background-image: url('/images/bee-1-min.png');
+    background-image: url('/images/bee-1.png');
 }
 
-
 /* Utility */
+
 .fadein {
     animation: fadein 2s;
 }
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
