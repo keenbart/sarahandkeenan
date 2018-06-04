@@ -234,6 +234,7 @@ p {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
 .hero-section h1, .hero-section h2, .hero-section h3, .hero-section p {
@@ -251,6 +252,14 @@ p {
     width: 58px;
     top: 15px;
     right: 15px;
+}
+@media (max-width: 540px) {
+    .hero-logo {
+        bottom: 15px;
+        top: auto;
+        height: 52px;
+        width: 52px;
+    }
 }
 
 .home-page .section-title {
@@ -383,6 +392,41 @@ p {
     background-size: auto 120px;
     background-position: center 20px;
     background-image: url('/images/tree-1.png');
+}
+
+@media (max-width: 600px) {
+    .main-menu .menu-item {
+        height: 150px;
+        padding-top: 102px;
+    }
+    .main-menu .details::after {
+        background-size: auto 88px;
+        background-position: center 15px;
+    }
+    .main-menu .about-us::after {
+        background-size: auto 80px;
+        background-position: center 22px;
+    }
+    .main-menu .registry::after {
+        background-size: auto 84px;
+        background-position: center 16px;
+    }
+    .main-menu .engagement::after {
+        background-size: auto 68px;
+        background-position: center 28px;
+    }
+    .main-menu .rsvp::after {
+        background-size: auto 64px;
+        background-position: center 30px;
+    }
+    .main-menu .party::after {
+        background-size: auto 90px;
+        background-position: center 15px;
+    }
+    .main-menu .chicago::after {
+        background-size: auto 85px;
+        background-position: center 15px;
+    }
 }
 
 /* About Us Page */
