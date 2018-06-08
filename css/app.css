@@ -305,13 +305,13 @@ p {
     }
 }
 
-@media (max-width: 800px) {
-    body {
+@media (max-width: 740px) {
+    /* body {
         padding-top: 0px;
-    }
+    } */
     .navbar {
         height: auto;
-        position: relative;
+        /* position: relative; */
     }
     .navbar .home-logo {
         display: none;
@@ -333,6 +333,7 @@ p {
     .navbar .navbar-links a {
         padding-left: 3px;
         padding-right: 3px;
+        padding-top:3px;
     }
 }
 
