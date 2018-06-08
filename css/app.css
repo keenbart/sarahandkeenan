@@ -79,6 +79,7 @@ p {
     display: inline-block;
     line-height: var(--header-height);
     vertical-align: top;
+    box-sizing: border-box;
 }
 
 .navbar .navbar-links a {
@@ -329,6 +330,8 @@ p {
         line-height: 20px;
         padding-bottom: 10px;
         padding-top: 4px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .navbar .navbar-links a {
         padding-left: 3px;
